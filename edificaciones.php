@@ -192,7 +192,7 @@ require 'config_edificaciones.php'
                 foreach ($productos as $producto) {
 
                     echo '<div class="col-md-3 mb-2">';
-                    echo '<div class="card" style="width:18rem;">';
+                    echo '<div class="card text-center" style="width:18rem;">';
                     echo '<div class="card border-secondary">';
                     echo '<img class="card-img-top" src="' . $producto->url_foto . '" alt="Card image cap">';
 
@@ -203,6 +203,9 @@ require 'config_edificaciones.php'
                     echo '<p class"card-text text-center">' . $producto->peralte .'</p>';
                     echo '<p class"card-text text-center">' . $producto->cimbra .'</p>';
 
+                    echo '<a href="#" class="btn btn-primary">Go somewhere</a>';
+                    
+                    
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
