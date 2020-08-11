@@ -34,7 +34,7 @@ require 'config_edificaciones.php'
                 <hr>
                 <h6 class="text-info">Tipo de Edificación:</h6>
                 </br>
-                <ul class="list-group-productos">
+                <ul class="list-group-productos text-justify">
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="azotea" class="form-check-label">
@@ -184,33 +184,37 @@ require 'config_edificaciones.php'
             <div class="col-lg-9">
 
                 <h5 class="text-center">Productos</h5>
-                <hr>
+                <div>
                 <?php
 
                 $productos = getAllProducts();
 
                 foreach ($productos as $producto) {
-                
-                    echo $producto;
-                    
+
+                    echo '<div class="col-md-3 mb-2">';
+                    echo '<div class="card" style="width:18rem;">';
+                    echo '<div class="card border-secondary">';
+                    echo '<img class="card-img-top" src="' . $producto->url_foto . '" alt="Card image cap">';
+
+                    echo '<div class="card-body">';
+
+                    echo '<h5 class="card-title text-center">' . $producto->nombre . '</h5>';
+                    echo '<p class"card-text text-center">' . $producto->peso .'</p>';
+                    echo '<p class"card-text text-center">' . $producto->peralte .'</p>';
+                    echo '<p class"card-text text-center">' . $producto->cimbra .'</p>';
+
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
                 }
                 ?>
-                <div class="row" id="result">
-
-
-
-
-                    <div class="col-md-3 mb-2">
-                        <div class="card-deck">
-                            <div class="card border-secondary">
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
+
+    </div>
 
     </div>
     <script type="text/javascript">
