@@ -290,7 +290,9 @@ function getAllProducts(){
 
 function getProductoPorPropiedad($propiedad){
 
-    if($propiedad == "" || $propiedad == null)
+    if($propiedad == "" || $propiedad == null){
+        return getAllProducts();
+    }
 
     $productos = [];
 
@@ -308,54 +310,45 @@ function getProductoPorPropiedad($propiedad){
     if(in_array($propiedad, $v11->get_propiedades() ) ){
         
         array_push($productos,$v11);
-        print('Added V11');
     }
     
     if(in_array($propiedad,$v16->get_propiedades())){
         array_push($productos, $v16);
-        print('Added V16');
 
     }
 
     if(in_array($propiedad, $v21->get_propiedades())){
         array_push($productos,$v21);
-        print('Added V21');
 
     }
 
     if(in_array($propiedad, $vt21->get_propiedades() )){
         array_push($productos, $vt21);
-        print('Added VT21');
 
     }
 
     if(in_array($propiedad, $losa10->get_propiedades())){
         array_push($productos, $losa10);
-        print('Added Losa10');
 
     }
 
     if(in_array($propiedad, $losa15->get_propiedades())){
         array_push($productos, $losa15);
-        print('Added Losa15');
 
     }
 
     if(in_array($propiedad, $losa20->get_propiedades())){
         array_push($productos, $losa20);
-        print('Added Losa20');
 
     }
 
     if(in_array($propiedad, $losa25->get_propiedades())){
         array_push($productos, $losa25);
-        print('Added Losa25');
 
     }
 
     if(in_array($propiedad, $losa30->get_propiedades())){
         array_push($productos, $losa30);
-        print('Added Losa30');
 
     }
    
