@@ -1,7 +1,6 @@
 <?php
 
-class ProductoEdificacion
-{
+class ProductoEdificacion{
     public $nombre;
     public $url_foto;
     public $url_redireccion;
@@ -10,7 +9,7 @@ class ProductoEdificacion
     public $cimbra;
     public $propiedades = array();
 
-    function __construct($nombre, $url_foto, $propiedades,$peso,$peralte,$cimbra)
+    function __construct($nombre, $url_foto, $propiedades,$peso,$peralte,$cimbra,$url_redireccion)
     {
         $this->nombre = $nombre;
         $this->url_foto = $url_foto;
@@ -18,6 +17,7 @@ class ProductoEdificacion
         $this->peso = $peso;
         $this->peralte = $peralte;
         $this->cimbra = $cimbra;
+        $this->url_redireccion = $url_redireccion;
     }
 
     function set_nombre($nombre)
@@ -66,7 +66,6 @@ class ProductoEdificacion
 }
 
 
-
 $VIGUETA11 = new ProductoEdificacion(
     "Vigueta 11",
     "https://www.velosa.com.mx/wp-content/uploads/2020/07/CA-V11-1024x576.png",
@@ -87,7 +86,8 @@ $VIGUETA11 = new ProductoEdificacion(
     ),
     "158 kg x M2",
     "11 centimetros",
-    "Reduce Cimbra 90%"
+    "Reduce Cimbra 90%",
+    "https://www.velosa.com.mx/portfolio/viguetas-pretensadas/"
 );
 
 $VIGUETA16 = new ProductoEdificacion(
@@ -104,7 +104,8 @@ $VIGUETA16 = new ProductoEdificacion(
     ),
     "172 kg x M2",
     "16 centimetros",
-    "Reduce Cimbra 90%"
+    "Reduce Cimbra 90%",
+    "https://www.velosa.com.mx/portfolio/viguetas-pretensadas/"
 );
 
 $VIGUETA21 = new ProductoEdificacion(
@@ -120,7 +121,8 @@ $VIGUETA21 = new ProductoEdificacion(
     ),
     "197 kg x M2",
     "21 centimetros",
-    "Reduce Cimbra 90%"
+    "Reduce Cimbra 90%",
+    "https://www.velosa.com.mx/portfolio/viguetas-pretensadas/"
 );
 
 $VIGUETAT21 = new ProductoEdificacion(
@@ -143,7 +145,8 @@ $VIGUETAT21 = new ProductoEdificacion(
     ),
     "228 kg x M2",
     "16 centimetros",
-    "Reduce Cimbra 90%"
+    "Reduce Cimbra 90%",
+    "https://www.velosa.com.mx/portfolio/vigueta-tubular/"
 );
 
 $LOSAALVEOLAR10 = new ProductoEdificacion(
@@ -161,14 +164,15 @@ $LOSAALVEOLAR10 = new ProductoEdificacion(
         'Gimnasios 0-3mts', 'Gimnasios 3-5mts',
         'Restaurantes 0-3mts', 'Restaurantes 3-5mts',
         'Bodegas 0-3mts', 'Bodegas 3-5mts',
-        'Estadios 0-3mts', 'Estadios 3-5mts'
+        'Estadios 0-3mts', 'Estadios 3-5mts',
+        "https://www.velosa.com.mx/portfolio/losa-alveolar/"
 
     ),
     "215 kg x M2",
     "10 centimetros",
-    "No Requiere Cimbra"
+    "No Requiere Cimbra",
+    "https://www.velosa.com.mx/portfolio/losa-alveolar/"
 );
-
 
 $LOSAALVEOLAR15 = new ProductoEdificacion(
     "Losa Alveolar 15",
@@ -188,9 +192,9 @@ $LOSAALVEOLAR15 = new ProductoEdificacion(
     ),
     "280 kg x M2",
     "15 centimetros",
-    "No Requiere Cimbra"
+    "No Requiere Cimbra",
+    "https://www.velosa.com.mx/portfolio/losa-alveolar/"
 );
-
 
 $LOSAALVEOLAR20 = new ProductoEdificacion(
     "Losa Alveolar 20",
@@ -212,7 +216,8 @@ $LOSAALVEOLAR20 = new ProductoEdificacion(
     ),
     "350 kg x M2",
     "20 centimetros",
-    "No Requiere Cimbra"
+    "No Requiere Cimbra",
+    "https://www.velosa.com.mx/portfolio/losa-alveolar/"
 );
 
 $LOSAALVEOLAR25 = new ProductoEdificacion(
@@ -234,7 +239,8 @@ $LOSAALVEOLAR25 = new ProductoEdificacion(
     ),
     "410 kg x M2",
     "25 centimetros",
-    "No Requiere Cimbra"
+    "No Requiere Cimbra",
+    "https://www.velosa.com.mx/portfolio/losa-alveolar/"
 );
 
 
@@ -256,7 +262,8 @@ $LOSAALVEOLAR30 = new ProductoEdificacion(
     ),
     "460 kg x M2",
     "30 centimetros",
-    "No Requiere Cimbra"
+    "No Requiere Cimbra",
+    "https://www.velosa.com.mx/portfolio/losa-alveolar/"
 );
 
 
@@ -282,6 +289,8 @@ function getAllProducts(){
 
 
 function getProductoPorPropiedad($propiedad){
+
+    if($propiedad == "" || $propiedad == null)
 
     $productos = [];
 

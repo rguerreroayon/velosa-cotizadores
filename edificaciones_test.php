@@ -21,42 +21,24 @@ require 'config_edificaciones.php'
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-
-
-    <script>
-
-        function onClickRadio(){
-            let tipoEdificacion = document.getElementsByName('edificacion');
-            if(tipoEdificacion[0].checked){
-                console.log('Azotea')
-
-                <?php ?>
-            }
-
-        }
-
-
-    </script>
-
-
 </head>
 
 <body>
+    <h3 class="text-center text-light bg-info p-2">Filtro de Edificaciones - Versión Beta 1.0</h3>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
+                <h5>
+                    Filtro para productos:
+                </h5>
                 <hr>
-                <a href="https://www.velosa.com.mx/cotizador/" class="btn btn-primary"> Volver </a>
-
-                <hr>
-                <h6 class="text-info" style="">Tipo de Edificación:</h6>
+                <h6 class="text-info">Tipo de Edificación:</h6>
                 </br>
-                <ul class="list-group-productos text-justify" style="padding-left:0px">
+                <ul class="list-group-productos text-justify">
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="azotea" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="azotea" name="edificacion" onclick="onClickRadio()" value="Azotea">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Azotea">
                                 Azotea
                             </label>
                         </div>
@@ -64,7 +46,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="casa_habitacion" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="casa-habitacion"name="edificacion" value="Casa Habitacion">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Casa Habitacion">
                                 Casa Habitación
                             </label>
                         </div>
@@ -72,7 +54,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="departamentos" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="departamentos" name="edificacion" value="Departamentos">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Departamentos">
                                 Departamentos
                             </label>
                         </div>
@@ -80,7 +62,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="hoteles" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="hoteles" name="edificacion" value="Hoteles">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Hoteles">
                                 Hoteles
                             </label>
                         </div>
@@ -88,7 +70,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="oficinas" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="oficinas" name="edificacion" value="Oficinas">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Oficinas">
                                 Oficinas
                             </label>
                         </div>
@@ -96,7 +78,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="estacionamientos" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="estacionamientos" name="edificacion" value="Estacionamientos">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Estacionamientos">
                                 Estacionamientos
                             </label>
                         </div>
@@ -104,7 +86,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="aulas" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="aulas" name="edificacion" value="Aulas">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Aulas">
                                 Aulas
                             </label>
                         </div>
@@ -112,7 +94,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="gimnasios" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="gimnasios" name="edificacion" value="Gimnasios">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Gimnasios">
                                 Gimnasios
                             </label>
                         </div>
@@ -120,7 +102,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="restaurantes" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="restaurantes" name="edificacion" value="Restaurantes">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Restaurantes">
                                 Restaurantes
                             </label>
                         </div>
@@ -128,7 +110,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="bodegas" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="bodegas" name="edificacion" value="Bodegas">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Bodegas">
                                 Bodegas
                             </label>
                         </div>
@@ -136,7 +118,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="estadios" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="estadios" name="edificacion" value="Estadios">
+                                <input type="radio" class="form-check-input product_check" name="grupo-productos" id="edificacion" value="Estadios">
                                 Estadios
                             </label>
                         </div>
@@ -145,11 +127,11 @@ require 'config_edificaciones.php'
                 </ul>
                 <h6 class="text-info">Tipo de Claro:</h6>
 
-                <ul class="list-group-claros" style="padding-left:0px">
+                <ul class="list-group-claros">
                     <li class="list-group-item">
                         <div class="form-check">
                             <label for="0-3mts" class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="0-3mts" name="claro-requerido" id="claro" value="0-3mts">
+                                <input type="radio" class="form-check-input product_check" name="grupo-claros" id="claro" value="0-3mts">
                                 0 - 3 metros
                             </label>
                         </div>
@@ -157,7 +139,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="3-5mts" name="claro-requerido" id="claro" value="3-5mts">
+                                <input type="radio" class="form-check-input product_check" name="grupo-claros" id="claro" value="3-5mts">
                                 3 - 5 metros
                             </label>
                         </div>
@@ -165,7 +147,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="5-7mts" name="claro-requerido" id="claro" value="5-7mts">
+                                <input type="radio" class="form-check-input product_check" name="grupo-claros" id="claro" value="5-7mts">
                                 5 - 7 metros
                             </label>
                         </div>
@@ -173,7 +155,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="7-9mts" name="claro-requerido" id="claro" value="7-9mts">
+                                <input type="radio" class="form-check-input product_check" name="grupo-claros" id="claro" value="7-9mts">
                                 7 - 9 metros
                             </label>
                         </div>
@@ -181,7 +163,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="9-11mts" name="claro-requerido" id="claro" value="9-11mts">
+                                <input type="radio" class="form-check-input product_check" name="grupo-claros" id="claro" value="9-11mts">
                                 9 - 11 metros
                             </label>
                         </div>
@@ -189,7 +171,7 @@ require 'config_edificaciones.php'
                     <li class="list-group-item">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input product_check" id="11-13mts" name="claro-requerido" id="claro" value="11-13mts">
+                                <input type="radio" class="form-check-input product_check" name="grupo-claros" id="claro" value="11-13mts">
                                 11 - 13 + metros
                             </label>
                         </div>
@@ -199,44 +181,49 @@ require 'config_edificaciones.php'
 
 
             </div>
-            <div class="col-lg-9" style="padding-top:135px">
+            <div class="col-lg-9">
 
-                <div class="row" id="resultado" ">
-
+            <h5 class="text-center" id="text-change">Todos los productos</h5>
+            <hr>
+            <div class="row" id="resultado">
                 <?php
-
-                $productos = getAllProducts();
-
-                foreach ($productos as $producto) {
-
-                    //echo '<div class="col-md-3 mb-2">';
-                    echo '<div class=".col-6 .col-md-4" style="padding:20px">';
-                    echo '<div class="card-deck">';
-                    echo '<div class="card text-center" style="width:18rem;">';
-                    echo '<img class="card-img-top" src="' . $producto->url_foto . '" alt="Card image cap">';
-
-                    echo '<div class="card-body">';
-
-                    echo '<h5 class="card-title text-center">' . $producto->nombre . '</h5>';
-                    echo '<p class"card-text text-center">' . $producto->peso . '</p>';
-                    echo '<p class"card-text text-center">' . $producto->peralte . '</p>';
-                    echo '<p class"card-text text-center">' . $producto->cimbra . '</p>';
-
-                    echo '<a target="_blank" href=" ' . $producto->url_redireccion . '" class="btn btn-primary"> Ver Producto  </a>';
+                 
+                 $productos = getAllProducts();
+                 foreach ($productos as $producto) {
+                     # code...
+                    $producto->nombre;
 
 
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                }
                 ?>
+                
+                <div class="col-md-3 mb-2">
+                    <div class="card-deck">
+                        <div class="card border-secondary">
+                            <img class="card-img-top" src="<? $producto->ulr_foto; ?>" alt="">
+                            <div class="card-img-overlay">
+                                <h6 class="text-light text-center bg-info rounded p-1">
+                                
+                                <?php  $producto->nombre ?>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <?php }?>
+
             </div>
+
+            </div>
+
         </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
 
-    </div>
 
-    </div>
-    
-    </html>
+
+            });
+        </script>
+</body>
+
+</html>
